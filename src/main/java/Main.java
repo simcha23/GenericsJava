@@ -1,19 +1,13 @@
 class GenericClass<T>{
-    private T _intElements;
-    private T _stringElements;
+    private T _elements;
 
-    public void setIntElements(T intElements){
-        _intElements = intElements;
+    public void setElements(T elements){
+        _elements = elements;
     }
-    public void setStringElements(T stringElements){
-        _stringElements = stringElements;
+    public T getElements(){
+        return _elements;
     }
-    public T getIntElements(){
-        return _intElements;
-    }
-    public T getStringElements(){
-        return _stringElements;
-    }
+
     public <T> void printArrayContent(T[] array){
         for (T elements:array) {
             System.out.print(elements + " "); // Print both integer and/or string elements
@@ -30,14 +24,14 @@ public class Main {
         obj.printArrayContent(new String[]{"Simcar", "Mahlangu", "Mpumalanga"});
 
         GenericClass<String> stringInstance = new GenericClass<String>();
-        stringInstance.setStringElements("Test"); //Assign a value to stringElement from Generic class
+        stringInstance.setElements("Test"); //Assign a string value to element from Generic class
 
-        System.out.println(stringInstance.getStringElements()); // print out Test
+        System.out.println(stringInstance.getElements()); // print out Test
 
         GenericClass<Integer> integerInstance = new GenericClass<Integer>();
-        integerInstance.setIntElements(1000); //Assign a value to intElement from Generic class
+        integerInstance.setElements(1000); //Assign a integer value to element from Generic class
 
-        System.out.println(integerInstance.getIntElements()); // print out 1000
+        System.out.println(integerInstance.getElements()); // print out 1000
 
     }
 
