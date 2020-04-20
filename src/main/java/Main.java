@@ -1,11 +1,11 @@
 class GenericClass<T>{
-    private T _elements;
+    private T _value;
 
-    public void setElements(T elements){
-        _elements = elements;
+    public void set(T value){
+        _value = value;
     }
-    public T getElements(){
-        return _elements;
+    public T get(){
+        return _value;
     }
 
     public <T> void printArrayContent(T[] array){
@@ -24,14 +24,14 @@ public class Main {
         obj.printArrayContent(new String[]{"Simcar", "Mahlangu", "Mpumalanga"});
 
         GenericClass<String> stringInstance = new GenericClass<String>();
-        stringInstance.setElements("Test"); //Assign a string value to element from Generic class
+        stringInstance.set("Test"); //Assign a string value to Generic class value
 
-        System.out.println(stringInstance.getElements()); // print out Test
+        System.out.println(stringInstance.get()); // print out Test
 
         GenericClass<Integer> integerInstance = new GenericClass<Integer>();
-        integerInstance.setElements(1000); //Assign a integer value to element from Generic class
+        integerInstance.set(1000); //Assign a integer value to Generic class value
 
-        System.out.println(integerInstance.getElements()); // print out 1000
+        System.out.println(integerInstance.get()); // print out 1000
 
     }
 
